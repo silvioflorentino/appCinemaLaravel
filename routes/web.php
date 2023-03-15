@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\cadastroFilme;
+use App\Http\Controllers\cadastroFuncionario;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cadastro-filme', function() {
-    return view('cadastroFilme');
-});
+Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme']);
+
+Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscaCadastroFuncionario']);
