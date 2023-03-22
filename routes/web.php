@@ -21,4 +21,4 @@ Route::get('/', function () {
 
 Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme']);
 
-Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscaCadastroFuncionario']);
+Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscarCadastroFuncionario']);

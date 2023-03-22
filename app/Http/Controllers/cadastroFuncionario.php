@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class cadastroFuncionario extends Controller
 {
-    public function buscaCadastroFuncionario(){
+    public function buscarCadastroFuncionario(){
         return View('cadastroFuncionario');
     }
 
