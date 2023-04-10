@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\Models\cadastroFilmeModel;
+use App\Models\Filme;
 
 class cadastroFilme extends Controller
 {
@@ -15,16 +15,21 @@ class cadastroFilme extends Controller
 
     public function cadastrarFilme(Request $request){
         $dadosFilme = $request->validate([
-            'filme' => 'string|required',
-            'atores' => 'string|required',
-            'dataLancamento' => 'string|required',
-            'sinopse' => 'string|required',
-            'capa' => 'string|required'
+            'nomefilme' => 'string|required',
+            'atoresfilme' => 'string|required',
+            'datalancamentofilme' => 'string|required',
+            'sinopsefilme' => 'string|required',
+            'capafilme' => 'file|required'
         ]);
+       // dd($dadosFilme);
 
-        cadastroFilmeModel::create($dadosFilme);
+        $file = $dadosFilme['capafilme'];
+        $path = $file->store('capa','public');
+        $dadosFilme['capafilme'] = $path;
+        
+        Filme::create($dadosFilme);
 
-        return Redirect::route('/home');
+        //return Redirect::route('/home');
     }
 
 }
