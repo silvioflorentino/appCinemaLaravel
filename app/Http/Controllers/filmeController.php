@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Filme;
 
-class cadastroFilme extends Controller
+class filmeController extends Controller
 {
     //construimos o CRUD aqui
 
