@@ -24,4 +24,4 @@ Route::post('/cadastro-filme',[filmeController::class,'cadastrarFilme'])->name('
 
 Route::get('/cadastro-funcionario',[funcionarioController::class,'buscarCadastroFuncionario'])->name('buscar-cadastro-funcionario');
 Route::post('/cadastro-funcionario',[funcionarioController::class,'cadastrarFuncionario'])->name('cadastro-funcionario');
-Route::get('/gerenciar-funcionario',[funcionarioController::class,'buscarFuncionario'])->name('gerenciar-funcionario');
+Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');

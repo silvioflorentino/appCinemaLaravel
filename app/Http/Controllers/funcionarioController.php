@@ -24,24 +24,24 @@ class funcionarioController extends Controller
             Funcionario::create($dadosfuncionarios);
         return Redirect::route('/home');
     }
-
+/*
     public function buscarFuncionario(){
-        return view('gerenciadorFuncionario');
+        return view('gerenciadorFuncionario',['dadosfuncionario']);
     }
-                           
+ */                          
     public function MostrarGerenciadorFuncionario(Request $request){
         $dadosfuncionarios = Funcionario::all();
-        dd(dadosfuncionarios);
-        /*
+       // dd($dadosfuncionarios);
+       /* 
         $dadosfuncionarios = Funcionario::query();
         $dadosfuncionarios->when($request->nomefun,function($query,$nomefuncionario ){
             $query->where('nomefun','like','%'.$nomefuncionario.'%');
         }); 
 
         $dadosfuncionarios = $dadosfuncionarios->get();
-
-        return view('gerenciadorFuncionario');
-        */
+*/
+        return view('gerenciadorFuncionario',['dadosfuncionario'=>$dadosfuncionarios]);
+        
     }
 
 
