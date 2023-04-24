@@ -17,7 +17,7 @@ use App\Http\Controllers\funcionarioController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/cadastro-filme',[filmeController::class,'buscaCadastroFilme'])->name('buscar-cadastro-filme');
 Route::post('/cadastro-filme',[filmeController::class,'cadastrarFilme'])->name('cadastro-filme');
