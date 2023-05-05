@@ -43,7 +43,7 @@ class funcionarioController extends Controller
         
     }
 
-    public function ApagarFuncionario(Funcionario $registrosFuncionarios){
+    public function ApagarBancoFuncionario(Funcionario $registrosFuncionarios){
         $registrosFuncionarios->delete();
 
         return Redirect::route('gerenciar-funcionario');
