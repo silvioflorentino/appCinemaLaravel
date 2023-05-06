@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme']);
+Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme'])->name('buscar-cadastro-filme');
+Route::post('/cadastro-filme',[cadastroFilme::class,'salvarFilme'])->name('salvar-filme');
 
-Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscarCadastroFuncionario']);
+Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscarCadastroFuncionario'])->name('buscar-cadastro-funcionario');
+Route::post('/cadastro-funcionario',[cadastroFuncionario::class,'salvarFuncionario'])->name('salvar-funcionario');

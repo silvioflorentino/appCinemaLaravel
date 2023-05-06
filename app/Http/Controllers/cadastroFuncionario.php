@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
-use App\Models\cadastroFuncionarioModel;
+
+use App\Models\Funcionario;
 
 class cadastroFuncionario extends Controller
 {
@@ -11,17 +12,20 @@ class cadastroFuncionario extends Controller
         return View('cadastroFuncionario');
     }
 
-    public function cadastrarFuncionario(Request $request){
+    public function salvarFuncionario(Request $request){
         $dadosfuncionarios = $request->validate(
             [
                 'emailfun'=> 'string|required',
                 'nomefun'=> 'string|required',
                 'senhafun'=> 'string|required',
                 'whatsappfun'=> 'string|required',
-                'cpffun'=> 'string|required'
+                'cpffun'=> 'string|required',
+                'capafilme'=> 'file|required',
             ]
             );
-            cadastroFuncionarioModel::create($dadosfuncionarios);
-        return Redirect::route('/home');
+
+          
+        Funcionario::create($dadosfuncionarios);
+        return Redirect::route('home');
     }
 }
