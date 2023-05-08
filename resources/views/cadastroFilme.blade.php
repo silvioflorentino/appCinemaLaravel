@@ -2,9 +2,9 @@
 
 @section('content') 
 
-<form enctype="multipart/form-data" method="POST" action="{{ route('salvar-filme') }}">
-@csrf          
-<div class="mb-3 form-check">
+<form enctype="multipart/form-data" method="post" action="{{route('cadastro-filme')}}">
+    @csrf
+            <div class="mb-3 form-check">
                 <label for="filmeInput" class="form-label">Filme:</label>
                 <input type="text" name="nomefilme" class="form-control" id="filmeInput" >
             </div>

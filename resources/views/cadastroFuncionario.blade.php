@@ -2,8 +2,8 @@
 
 @section('content') 
 
-<form method = "post" action="{{route('salvar-funcionario')}}">
-@csrf
+<form method = "post" action="{{route('cadastro-funcionario')}}">
+    @csrf
             <div class="mb-3 form-check">
                 <label for="nomeInput" class="form-label">Nome:</label>
                 <input type="text" name="nomefun" class="form-control" id="nomeInput" >

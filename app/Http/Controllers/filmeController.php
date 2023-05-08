@@ -1,10 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Filme;
 
-class cadastroFilme extends Controller
+class filmeController extends Controller
 {
     //construimos o CRUD aqui
 
@@ -12,21 +13,23 @@ class cadastroFilme extends Controller
         return View('cadastroFilme');
     }
 
-    public function salvarFilme(Request $request){
+    public function cadastrarFilme(Request $request){
         $dadosFilme = $request->validate([
             'nomefilme' => 'string|required',
             'atoresfilme' => 'string|required',
-            'dataLancamentofilme' => 'string|required',
+            'datalancamentofilme' => 'string|required',
             'sinopsefilme' => 'string|required',
-            'capafilme' => 'string|required'
+            'capafilme' => 'file|required'
         ]);
-        $file = $dadosFilme['capafilme'];
-        $path = $file->store('capas', 'public');
+       // dd($dadosFilme);
 
+        $file = $dadosFilme['capafilme'];
+        $path = $file->store('capa','public');
         $dadosFilme['capafilme'] = $path;
+        
         Filme::create($dadosFilme);
 
-        return Redirect::route('/home');
+        //return Redirect::route('/home');
     }
 
 }
