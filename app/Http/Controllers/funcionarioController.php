@@ -64,7 +64,7 @@ class funcionarioController extends Controller
 
         $registrosFuncionarios->fill($dadosfuncionarios);
         $registrosFuncionarios->save();
-
+//dd($registrosFuncionarios);
         return Redirect::route('gerenciar-funcionario');
     }
 }

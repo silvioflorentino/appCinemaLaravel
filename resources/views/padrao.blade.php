@@ -23,7 +23,7 @@
               
               
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Filme</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{{'/cadastro-filme'}}">Cadastrar</a></li>
                   <li><a class="dropdown-item" href="{{'/gerenciar-filme'}}">Gerenciar</a></li>
@@ -31,7 +31,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Filme</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{'/cadastro-funcionario'}}">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="{{'/gerenciar-funcionario'}}">Gerenciar</a></li>
