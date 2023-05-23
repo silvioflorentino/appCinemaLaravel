@@ -15,9 +15,17 @@ use App\Http\Controllers\funcionarioController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/adm', function () {
     return view('home');
 })->name('home');
+
+Route::get('/', function () {
+    return view('site/index');
+})->name('index');
+
+Route::get('/login', function () {
+    return view('site/login');
+})->name('login');
 
 Route::get('/cadastro-filme',[filmeController::class,'buscaCadastroFilme'])->name('buscar-cadastro-filme');
 Route::post('/cadastro-filme',[filmeController::class,'cadastrarFilme'])->name('cadastro-filme');
