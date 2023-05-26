@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nomefilme');
-            $table->string('atoresfilme');
+            $table->string('generofilme');
+            $table->string('distribuidorafilme');
+            $table->string('diretorfilme');
+            $table->string('classificacaofilme');
+            $table->string('duracaofilme');
             $table->longText('sinopsefilme');
-            $table->date('datalancamentofilme');
+            $table->date('categoria');
             $table->string('capafilme');
             
         });

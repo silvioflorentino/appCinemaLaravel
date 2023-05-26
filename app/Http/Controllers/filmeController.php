@@ -31,5 +31,14 @@ class filmeController extends Controller
 
         //return Redirect::route('/home');
     }
+    public function exibirFilme(){
+
+        $dadosfilme = Filme::query();
+
+        $dadosfilme = $dadosfilme->get();
+
+        return view('site/index',['dadosfilme'=>$dadosfilme]);
+     
+    }
 
 }

@@ -85,77 +85,29 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- aqui loop-->
+                        @foreach($dadosfilme as $dadosfilmes)
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/cartaz/panico6.jpeg">
-                                        <div class="ep">18</div>
+                                    <div class="product__item__pic set-bg" data-setbg="{{$dadosfilmes->capafilme}}">
+                                        <div class="ep">{{$dadosfilmes->classificacaofilme}}</div>
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>Terror</li>
-                                            <li>120min</li>
+                                            <li>{{$dadosfilmes->generofilme}}</li>
+                                            <li>{{$dadosfilmes->duracaofilme}}</li>
                                         </ul>
-                                        <h5><a href="panicoiv.html">Pânico VI</a></h5>
+                                        <h5><a href="panicoiv.html">{{$dadosfilmes->nomefilme}}</a></h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/cartaz/creed-III.jpeg"></a>
-                                        <div class="ep">12</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Drama</li>
-                                            <li>115min</li>
-                                        </ul>
-                                        <h5><a href="./creed-iii.html">Creed III</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/cartaz/desaparecida.jpg">
-                                        <div class="ep">14</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Suspense</li>
-                                            <li>110min</li>
-                                        </ul>
-                                        <h5><a href="./desaparecida.html">Desaparecida</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/cartaz/duasbruxas.jpg">
-                                        <div class="ep">18</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Terror</li>
-                                            <li>95min</li>
-                                        </ul>
-                                        <h5><a href="./duasbruxas.html">Duas Bruxas</a></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="img/cartaz/pearl.png">
-                                        <div class="ep">18</div>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <ul>
-                                            <li>Terror</li>
-                                            <li>100min</li>
-                                        </ul>
-                                        <h5><a href="pearl.html">Pearl</a></h5>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            <!-- fim loop-->
+                            
+                           
+                           
+                            
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="img/cartaz/gatodebotas.jpeg">

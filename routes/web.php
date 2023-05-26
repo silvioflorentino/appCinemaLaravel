@@ -18,11 +18,11 @@ use App\Http\Controllers\funcionarioController;
 Route::get('/adm', function () {
     return view('home');
 })->name('home');
-
+/*
 Route::get('/', function () {
     return view('site/index');
 })->name('index');
-
+*/
 Route::get('/login', function () {
     return view('site/login');
 })->name('login');
@@ -33,7 +33,7 @@ Route::post('/cadastro-filme',[filmeController::class,'cadastrarFilme'])->name('
 Route::get('/cadastro-funcionario',[funcionarioController::class,'buscarCadastroFuncionario'])->name('buscar-cadastro-funcionario');
 Route::post('/cadastro-funcionario',[funcionarioController::class,'cadastrarFuncionario'])->name('cadastro-funcionario');
 Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');
-
+Route::get('/',[filmeController::class,'exibirFilme'])->name('index');
 Route::delete('/gerenciar-funcionario/{registrosFuncionarios}',[funcionarioController::class,'ApagarBancoFuncionario'])->name('apagar-funcionario');
 
 Route::get('/alterar-funcionario/{registroFuncionario}',[funcionarioController::class,'MostrarRegistrosFuncionario'])->name('mostrar-funcionario');
